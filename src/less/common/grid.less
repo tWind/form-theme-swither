@@ -1,0 +1,21 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: @indent-base 0;
+
+  &__heading {
+    flex-basis: 100%;
+  }
+}
+
+.column {
+  flex-basis: calc(50% - @indent-base/2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
+
+  &:not(:last-child) {
+    margin-right: @indent-base;
+  }
+}

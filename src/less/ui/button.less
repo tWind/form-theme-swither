@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: @base-font;
+  line-height: 22.4px;
+  padding: 0 16px;
+  background-color: @white;
+  color: @brown;
+  border: 1px @brown solid;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:disabled {
+    border-color: @grey-light-1;
+    background-color: @grey-light-2;
+  }
+}
+
+.button--brown {
+  color: @white;
+  border-color: @brown;
+  background-color: @brown;
+}

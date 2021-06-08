@@ -1,0 +1,45 @@
+:root[data-theme="theme-light"] {
+  --bg-color: @light;
+  --block-bg-color: @grey;
+  --content-bg-color: @white;
+  --heading-color: @black;
+}
+
+:root[data-theme="theme-violet"] {
+  --bg-color: @violet-dark;
+  --block-bg-color: @violet-light;
+  --content-bg-color: @violet;
+  --heading-color: @white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: @base-font;
+  background-color: var(--bg-color);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+h3, h5 {
+  font-family: @caption-font;
+  color: var(--heading-color);
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 10px 0;
+}
