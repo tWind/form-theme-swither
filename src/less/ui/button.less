@@ -25,3 +25,16 @@
   border-color: @brown;
   background-color: @brown;
 }
+
+.button--add {
+  position: relative;
+  padding-left: @indent-base*2.75;
+
+  &:before {
+    width: 24px; height: 24px;
+    position: absolute; left: @indent-base; top: 50%;
+    content: "";
+    background: @svg-add no-repeat;
+    transform: translateY(-50%);
+  }
+}

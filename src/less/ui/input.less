@@ -15,12 +15,18 @@
       height: 48px;
       font-size: 14px;
       padding: 0 @indent-base;
+      color: @dark;
       background-color: @white;
       border: 1px solid @grey-light;
       border-radius: 4px;
+      outline: 0;
 
       &::placeholder {
         color: @grey-dark;
+      }
+
+      &:focus {
+        border-color: @brown;
       }
     }
 
@@ -76,13 +82,31 @@
       }
     }
   }
+
+
+  // state error modifier
+  &.is-error {
+    input {
+      border-color: @red;
+    }
+  }
+}
+
+.input__error {
+  span {
+    font-size: 12px;
+    color: @red;
+    line-height: 16px;
+  }
 }
 
 .input--text {
+  position: relative;
+
   label {
     height: 20px;
     margin-bottom: 4px;
-    display: inline-block;
+    display: block;
   }
 }
 
