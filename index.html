@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Test: Main_page</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Caption:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/build/css/styles.min.css">
 </head>
@@ -35,7 +35,7 @@
         <div class="column">
           <div class="input">
             <input type="checkbox" id="check1">
-            <label for="check1">Высшее учебное заведение Санкт-Петербурга</label>
+            <label for="check1"><span>Высшее учебное заведение Санкт-Петербурга</span></label>
           </div>
         </div>
       </div>
@@ -62,7 +62,8 @@
           <button class="button">Добавить</button>
         </div>
       </div>
-      <div class="row box">
+      <div class="row box js-box">
+        <span class="box__remove-button js-box-button"></span>
         <div class="column">
           <div class="input input--switch">
             <label class="switch">
@@ -76,18 +77,22 @@
           </div>
         </div>
         <div class="column">
-          <div class="input input--text">
+          <div class="input input--text is-error">
             <label for="text1">Специальность</label>
             <input type="text" id="text1" placeholder="Выберите специализацию">
+            <div class="input__error">
+              <span>Error: сообщение об ошибке</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="column">
-          <button class="button">Добавить</button>
+          <button class="button button--add">Добавить</button>
         </div>
       </div>
-      <div class="row box">
+      <div class="row box js-box">
+        <span class="box__remove-button js-box-button"></span>
         <div class="column">
           <div class="input input--switch">
             <label class="switch">

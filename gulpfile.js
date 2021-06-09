@@ -16,7 +16,7 @@ const cleancss = require('gulp-clean-css');
 
 function browsersync() {
   browserSync.init({
-    server: { baseDir: '/' },
+    server: { baseDir: './' },
     notify: false,
     online: true,
   });
