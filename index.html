@@ -136,9 +136,14 @@
           <h5>Переключение темы</h5>
         </div>
         <div class="column">
-          <div class="theme-switcher">
-            <span onclick="switchTheme()">Переключить тему</span>
-          </div>
+          <ul class="theme-switcher js-theme-switcher">
+            <li class="theme-switcher__tab">
+              <span class="theme-switcher__btn js-theme-switcher-btn js-active" onclick="switchTheme('theme-light')">Светлая</span>
+            </li>
+            <li class="theme-switcher__tab">
+              <span class="theme-switcher__btn js-theme-switcher-btn" onclick="switchTheme('theme-violet')">Темная</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
