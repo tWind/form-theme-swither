@@ -1,21 +1,19 @@
 const html = document.querySelector('html');
-const theme = {
-  dark: 'theme-violet',
-  light: 'theme-light',
-};
+const switcher = document.querySelector('.js-theme-switcher');
+const switcherButtons = switcher.querySelectorAll('.js-theme-switcher-btn');
 
-html.dataset.theme = theme.light;
+html.dataset.theme = 'theme-light';
 
-function switchTheme() {
-  const currentTheme = html.dataset.theme;
-
-  (currentTheme !== theme.dark) ? html.dataset.theme = theme.dark : html.dataset.theme = theme.light;
+function switchTheme(theme) {
+  html.dataset.theme = theme;
+  console.log(event.target);
+  for(const button of switcherButtons) {
+    (button !== event.target) ? button.classList.remove('js-active') : button.classList.add('js-active');
+  }
 }
 
 function deleteBox() {
   const boxList = document.querySelectorAll('.js-box');
-
-  console.log(boxList.length);
 
   for(const box of boxList) {
     const removeButton = box.querySelector('.js-box-button');

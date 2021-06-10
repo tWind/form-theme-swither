@@ -1,0 +1,50 @@
+.theme-switcher {
+  background-color: @grey-light-2;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.theme-switcher__tab {
+  position: relative;
+  flex-basis: 210px;
+  width: 210px;
+  flex-grow: 0;
+  padding: 4px;
+
+  &:not(:last-child) {
+    &:after {
+      position: absolute; top: 4px; right: 0;
+      width: 0;
+      height: 24px;
+      content: "";
+      border-right: 1px @grey-light solid;;
+      z-index: 1;
+    }
+  }
+}
+
+.theme-switcher__btn {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @dark;
+  height: 24px;
+  padding: 4px;
+  cursor: pointer;
+
+  &:hover, &.js-active {
+    box-shadow: 0 1px 4px rgba(58, 58, 58, 0.3);
+    border-radius: 4px;
+  }
+
+  &:hover {
+    background-color: @light;
+  }
+  &.js-active {
+    background-color: @white;
+  }
+}
