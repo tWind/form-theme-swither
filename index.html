@@ -97,7 +97,7 @@
           <div class="input input--switch">
             <label class="switch">
               Заведение
-              <input type="checkbox">
+              <input type="checkbox" checked>
               <span class="switch__slider"></span>
             </label>
           </div>
@@ -117,11 +117,31 @@
           <button class="button" disabled>Добавить</button>
         </div>
       </div>
+      <div class="row">
+        <div class="row__heading">
+          <h5>Range</h5>
+        </div>
+        <div class="column">
+          <div class="input range input--range">
+            <span class="range__counter">0</span>
+            <div class="range__container">
+              <input type="range">
+            </div>
+            <span class="range__counter">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row__heading">
+          <h5>Переключение темы</h5>
+        </div>
+        <div class="column">
+          <div class="theme-switcher">
+            <span onclick="switchTheme()">Переключить тему</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="theme-switcher">
-    <span onclick="switchTheme()">Переключить тему</span>
   </div>
 
   <script src="/build/js/app.min.js"></script>
